@@ -1,0 +1,470 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+ */
+
+:root {
+  --blue: rgba(0, 117, 255, 1);
+  --wh: calc(1vw + 1vh);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+} 
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+section {
+  padding: 6vw 10vw;
+}
+
+span, a {
+  color: var(--blue);
+}
+
+a {
+  transition: .3s;
+  &:hover {
+    color: rgb(25, 0, 255);
+  }
+}
+
+h2 {
+  font-size: calc(1.3vw + 1.3vh);
+}
+
+/* ----------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding: 1vw 10vw;
+  align-items: center;
+  z-index: 100;
+  transition: .3s;
+}
+
+nav ul li a {
+  text-shadow: 4px 3px 7px rgba(0, 0, 0, 1);
+
+}
+
+.header_mini {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 29px -11px rgba(0, 0, 0, .6);
+  padding: .3vw 10vw;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+h1, h2, h3, h4, p, span, button, a {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin-left: 2vw;
+  font-size: 1.2vw;
+}
+
+li a {
+  color: #fff;
+  transition: .2s;
+}
+
+li a:hover {
+  color: var(--blue)
+}
+
+.header_logo img{
+  width: 10vw;
+}
+
+/* ---------------------------- */
+
+#main_page {
+  max-width: 100vw;
+  height: 100vh;
+  background-image: url(images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.line {
+  width: 0;
+  border-radius: 2px;
+  height: 3px;
+  background-color: #fff;
+  transition: .5s;
+  margin-top: .5vw;
+}
+
+.main_text {
+  position: absolute;
+  bottom: 4.166vw;
+  left: 6.25vw;
+}
+
+.main_text:hover {
+  cursor: default;
+}
+
+.main_text:hover .line{
+  width: 100%;
+}
+
+.main_text h1 {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.2vw;
+  letter-spacing: 2px;
+  text-align: left;
+  transition: .5s;
+}
+
+/* ---------------------------------------- */
+
+.history {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history_title {
+  font-size: 2vw;
+}
+
+.description_of_city {
+  font-size: 1vw;
+  max-width: 30vw;
+}
+
+.description_of_city p {
+  margin-top: 2vw;
+}
+
+.description_of_city p:nth-child(2) {
+  margin-top: 1vw;
+}
+
+.description_of_city p:last-child {
+  font-weight: 700;
+  color: rgba(62, 62, 62, 1);
+}
+
+/* ---------------------------- */
+
+#gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery_cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.glr_card {
+  margin-top: 2vw;
+  width: 100%;
+}
+
+.image_gallery {
+  display: flex;
+  justify-content: space-between;
+  height: 20vw;
+}
+
+.img_glr_card {
+  border-radius: 8px;
+}
+
+.img_card_1:nth-child(1) {
+  width: 62%;
+  background: url('images/gallery/card1_1.jpg') no-repeat center / cover;
+}
+
+.img_card_1:nth-child(2) {
+  width: 36%;
+  background: url('images/gallery/card1_2.jpg') no-repeat center / cover;
+}
+
+.img_card_2:nth-child(1) {
+  width: 49%;
+  background: url('images/gallery/card2_1.jpg') no-repeat center / cover;
+}
+
+.img_card_2:nth-child(2) {
+  width: 49%;
+  background: url('images/gallery/card2_2.jpg') no-repeat center / cover;
+}
+
+.img_card_3:nth-child(1) {
+  width: 36%;
+  background: url('images/gallery/card3_1.jpg') no-repeat center / cover;
+  border-radius: 8px;
+}
+
+.img_card_3:nth-child(2) {
+  width: 62%;
+  background: url('images/gallery/card3_2.jpg') no-repeat center / cover;
+  border-radius: 8px;
+}
+
+/* invisible cards */
+
+.invisible_js {
+  display: none;
+}
+
+.invisible_cards .img_card_1:nth-child(1) {
+  width: 62%;
+  background: url('images/gallery/Inv_card1_1.png') no-repeat top / cover;
+}
+
+.invisible_cards .img_card_1:nth-child(2) {
+  width: 36%;
+  background: url('images/gallery/Inv_card1_2.jpg') no-repeat center / cover;
+}
+
+.invisible_cards .img_card_2:nth-child(1) {
+  width: 49%;
+  background: url('images/gallery/Inv_card2_1.jpg') no-repeat center / cover;
+}
+
+.invisible_cards .img_card_2:nth-child(2) {
+  width: 49%;
+  background: url('images/gallery/Inv_card2_2.jpg') no-repeat center / cover;
+}
+
+.invisible_cards .img_card_3:nth-child(1) {
+  width: 36%;
+  background: url('images/gallery/Inv_card3_1.jpg') no-repeat center / cover;
+  border-radius: 8px;
+}
+
+.invisible_cards .img_card_3:nth-child(2) {
+  width: 62%;
+  background: url('images/gallery/Inv_card3_2.jpg') no-repeat center / cover;
+  border-radius: 8px;
+}
+
+.img_title {
+  margin-top: 1vw;
+  font-weight: 700;
+  font-size: 1vw;
+}
+
+.btn_gallery {
+  width: 9vw;
+  height: 3vw;
+  background: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  font-size: 1vw;
+  font-weight: 600;
+  color: var(--blue);
+  margin-top: 2vw;
+  cursor: pointer;
+  transition: .1s;
+}
+
+.btn_gallery:active {
+  background: rgba(0, 117, 255, .1);
+}
+
+/* -------------------------*/
+
+#celebrities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clb_cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2vw;
+}
+
+.clb_card {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 70%;
+  height: 16vw;
+  border-radius: 1vw;
+}
+
+.gladkov {
+  background: url(images/celebrities/gladkov.jpg) no-repeat center / cover;
+}
+
+.khorkina {
+  background: url(images/celebrities/khorkina.jpg) no-repeat center / cover;
+}
+
+.tetuhin {
+  background: url(images/celebrities/tetuhin.jpg) no-repeat center / cover;
+}
+
+.clb_cards h3 {
+  color: var(--blue);
+  font-size: 1.3vw;
+  margin-top: 1.5vw;
+}
+
+.clb_cards h4 {
+  color: rgba(159, 173, 194, 1);
+  font-size: .9vw;
+  font-weight: 400;
+  margin: .5vw 0;
+}
+
+.clb_card p {
+  font-size: 1vw;
+  margin-top: .2vw;
+  text-align: center;
+}
+
+.clb_cards a {
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+/* ------------------------------------ */
+
+#education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#education h3 {
+  font-size: 1.75vw;
+}
+
+.ed_text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 3vw 0;
+}
+
+.ed_text h3 {
+  font-size: 2vw;
+}
+
+.ed_title {
+  width: 30vw;
+  font-size: 1vw;
+}
+
+.ed_title h4 {
+  font-size: 1.17vw;
+}
+
+.ed_title p {
+  margin-top: 1vw;
+}
+
+.ed_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 6vh 0;
+}
+
+.university_title {
+  max-width: 45%;
+}
+
+.university_title > h4 {
+  font-size: 1.5vw;
+}
+
+.university_title p, .university_title a {
+  font-size: 1vw;
+  margin-top: 1vw;
+}
+
+.scroll_container, .scroll_container1, .scroll_container2, .scroll_container3, .scroll_container4 {
+  width: 41vw;
+  height: 30vh;
+  display: flex;
+  border-radius: 1vw;
+  gap: 1vw;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding-bottom: .3vw;
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 1vw;
+  }
+}
+
+.scroll_container > img, .scroll_container1 > img, .scroll_container2 > img, .scroll_container3 > img, .scroll_container4 > img {
+  scroll-snap-align: start;
+  border-radius: 1vw;
+}
+
+/* ------------------ */
+
+footer {
+  width: 100%;
+  height: 30vh;
+  background-image: url(images/gallery/Inv_card1_2.jpg);
+  background-size: cover;
+  background-position: 0px -20vh;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  width: 100%;
+  height: 30vh;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  position: absolute;
+}
+
+footer img {
+  position: absolute;
+  width: 13vw;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  opacity: .9;
+}
