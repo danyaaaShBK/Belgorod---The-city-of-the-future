@@ -106,3 +106,17 @@ button.addEventListener('click', function() {
   i += 1;
 
 })
+
+const pashalka = document.querySelector('.paskalka')
+const sofg = document.querySelector('.sofg')
+
+let count = 0
+pashalka.addEventListener('click', function() {
+
+  if (count > 10) {
+    sofg.classList.add('visible_pashalka')
+    count += 1
+  } else {
+    count += 1
+  }
+})
